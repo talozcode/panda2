@@ -118,7 +118,7 @@ export default function App() {
   const [nextId, setNextId] = useState(INITIAL_COUNT + 1);
   const [chaosUntil, setChaosUntil] = useState(0);
   const [burstAt, setBurstAt] = useState<number | null>(null);
-  const [addTapCount, setAddTapCount] = useState(0);
+  const [tapCount] = useState(0)
   const [reduceMotion, setReduceMotion] = useState(false);
   const pressTimer = useRef<number | null>(null);
   const pointerMoved = useRef(false);
@@ -288,6 +288,7 @@ export default function App() {
               } as React.CSSProperties
             }
             onClick={(event) => {
+              
               event.stopPropagation();
               onPandaTap(panda.id);
             }}
