@@ -44,7 +44,6 @@ const REACTIONS: PandaReaction[] = [
 ];
 
 const rand = (min: number, max: number) => Math.random() * (max - min) + min;
-
 const pick = <T,>(values: T[]) => values[Math.floor(Math.random() * values.length)];
 
 function createPanda(id: number, x?: number, y?: number, sizeOverride?: number): Panda {
